@@ -17,6 +17,11 @@ const config: Config = {
         'gray-800': '#F2F2F2',
         'gray-900': '#FAFAFA',
         'gray-FFF': '#FFFFFF',
+        'color-primary': '#FAF5FF',
+        'color-accent': '#E3EDF8',
+      },
+      fontFamily: {
+        sans: ['Fahkwang', 'sans-serif'],
       },
     },
   },
