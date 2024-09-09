@@ -21,9 +21,14 @@ body {
     rgb(var(--background-start-rgb));
 }
 
-.text-blur {
+.text-blur-l {
   color: transparent;
   text-shadow: 0 0 8px rgba(255, 255, 255, 1);
+}
+
+.text-blur-s {
+  color: transparent;
+  text-shadow: 0 0 4px rgba(255, 255, 255, 1);
 }
 
 @layer utilities {
