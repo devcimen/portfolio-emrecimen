@@ -12,7 +12,7 @@ const Header: FC = () => {
 
     return (
         <motion.header
-            className="flex justify-between items-center w-full py-4 sticky top-0 bg-gray-000 z-50"
+            className="flex justify-between items-center w-full py-4 sticky top-0 z-50"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}

@@ -55,9 +55,9 @@ const Home: NextPage = () => {
                 </section>
 
                 {/* About section */}
-                <section id='about' className="mt-20 flex flex-col relative mb-40">
+                <section id='about' className="mt-20 flex flex-col relative">
                     <div className='flex items-start w-full'>
-                        <Tag text=".aboutme" />
+                        <Tag text=".aboutme" type='primary' />
                         <div className="relative ml-auto">
                             <motion.div
                                 className="w-60 h-48 relative"
@@ -67,12 +67,12 @@ const Home: NextPage = () => {
                                 transition={{ duration: 1 }}
                             >
                                 <div className='w-full h-full grayscale'>
-                                <Image
-                                    src="/photos/000074390001.JPEG"
-                                    alt="Picture of Emre Cimen"
-                                    layout="fill"
-                                    objectFit="cover"
-                                />
+                                    <Image
+                                        src="/photos/000074390001.JPEG"
+                                        alt="Picture of Emre Cimen"
+                                        layout="fill"
+                                        objectFit="cover"
+                                    />
                                 </div>
                             </motion.div>
                         </div>
@@ -98,6 +98,31 @@ const Home: NextPage = () => {
                         I value clean code as much as I value captivating visuals, believing that true digital mastery lies in the harmony of both.
                     </motion.p>
 
+                </section>
+
+                {/* Skills section */}
+                <section id='skills' className="mt-20 flex flex-col relative mb-40">
+                    <div className='flex items-start w-full'>
+                        <Tag text=".skills" type='primary' />
+                    </div>
+                    <div className='mt-6 flex flex-wrap gap-4'>
+                        <motion.div
+                            className='flex flex-wrap gap-4'
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 1, staggerChildren: 0.2 }}
+                        >
+                            <Tag text="UX / UI" type="secondary" />
+                            <Tag text="Frontend Development" type="secondary" />
+                            <Tag text="Mobile Development" type="secondary" />
+                            <Tag text="Design System" type="secondary" />
+                            <Tag text="Data Modelling" type="secondary" />
+                            <Tag text="Database Architecture" type="secondary" />
+                            <Tag text="Backend Development" type="secondary" />
+                            <Tag text="CI / CD" type="secondary" />
+                        </motion.div>
+                    </div>
                 </section>
             </div>
         </div>
