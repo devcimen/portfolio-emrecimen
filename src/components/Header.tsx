@@ -12,7 +12,7 @@ const Header: FC = () => {
 
     return (
         <motion.header
-            className="flex justify-between items-center w-full px-6 py-4"
+            className="flex justify-between items-center w-full py-4 sticky top-0 bg-gray-000 z-50"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -25,14 +25,12 @@ const Header: FC = () => {
             >
                 {formattedDate}
             </motion.div>
-            {/* Placeholder navigation menu */}
             <motion.div
                 className="text-white text-2xl font-semibold leading-6 tracking-tight"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.3 }}
             >
-                {/* Placeholder icon, replace this with the actual hamburger menu later */}
                 <NavMenu />
             </motion.div>
         </motion.header>

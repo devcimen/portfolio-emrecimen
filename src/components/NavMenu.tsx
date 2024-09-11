@@ -1,6 +1,10 @@
+// Navigation Menu
+// This component contains the navigation menu for the website.
+
 import { FC, useState } from "react";
 import { motion } from "framer-motion";
 import Link from 'next/link';
+import NavElement from "./NavElement";
 
 const NavMenu: FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -37,66 +41,61 @@ const NavMenu: FC = () => {
             <div onClick={toggleMenu} className="relative w-8 h-8 cursor-pointer z-50">
                 {/* Top Bar */}
                 <motion.div
-                    className="absolute top-1/2 left-0 w-full h-0.5 bg-gray-400 transform -translate-y-2" // Centers the top bar
+                    className="absolute top-1/2 left-0 w-full h-0.5 bg-gray-400 transform -translate-y-2"
                     initial={false}
                     animate={isOpen ? "open" : "closed"}
                     variants={topBarVariants}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.75 }}
                 />
                 {/* Bottom Bar */}
                 <motion.div
-                    className="absolute top-1/2 left-0 w-full h-0.5 bg-gray-400 transform translate-y-2" // Centers the bottom bar
+                    className="absolute top-1/2 left-0 w-full h-0.5 bg-gray-400 transform translate-y-2"
                     initial={false}
                     animate={isOpen ? "open" : "closed"}
                     variants={bottomBarVariants}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.75 }}
                 />
             </div>
 
 
             {/* Navigation Menu */}
             <motion.nav
-                className="fixed top-0 left-0 w-full h-full bg-gray-000 z-40 flex flex-col items-center justify-center"
+                className="fixed left-0 w-full h-full bg-gray-000 z-40 flex flex-col"
                 initial="closed"
                 animate={isOpen ? "open" : "closed"}
                 variants={menuVariants}
             >
-                <motion.ul className="space-y-10 text-white text-2xl">
-                    <motion.li
-                        className="hover:text-color-accent transition-colors duration-300"  // Hover effect
+                <motion.ul className="space-y-10 text-white text-2xl mx-6 mt-16">
+                    <NavElement
+                        href="/projects"
+                        text="Selected Projects"
                         variants={itemVariants}
                         onClick={toggleMenu}
-                    >
-                        <Link href="/projects">Selected Projects</Link>
-                    </motion.li>
-                    <motion.li
-                        className="hover:text-color-accent transition-colors duration-300"  // Hover effect
+                    />
+                    <NavElement
+                        href="/photography"
+                        text="Photography"
                         variants={itemVariants}
                         onClick={toggleMenu}
-                    >
-                        <Link href="/photography">Photography</Link>
-                    </motion.li>
-                    <motion.li
-                        className="hover:text-color-accent transition-colors duration-300"  // Hover effect
+                    />
+                    <NavElement
+                        href="/book-reviews"
+                        text="Book Reviews"
                         variants={itemVariants}
                         onClick={toggleMenu}
-                    >
-                        <Link href="/book-reviews">Book Reviews</Link>
-                    </motion.li>
-                    <motion.li
-                        className="hover:text-color-accent transition-colors duration-300"  // Hover effect
+                    />
+                    <NavElement
+                        href="/blog"
+                        text="Blog"
                         variants={itemVariants}
                         onClick={toggleMenu}
-                    >
-                        <Link href="/blog">Blog</Link>
-                    </motion.li>
-                    <motion.li
-                        className="hover:text-color-accent transition-colors duration-300"  // Hover effect
+                    />
+                    <NavElement
+                        href="/about"
+                        text="About"
                         variants={itemVariants}
                         onClick={toggleMenu}
-                    >
-                        <Link href="/about">About</Link>
-                    </motion.li>
+                    />
                 </motion.ul>
             </motion.nav>
         </>
