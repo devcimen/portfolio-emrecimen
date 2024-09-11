@@ -1,13 +1,21 @@
 // Navigation Menu
 // This component contains the navigation menu for the website.
 
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Link from 'next/link';
 import NavElement from "./NavElement";
 
 const NavMenu: FC = () => {
     const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        // Prevent scrolling when the menu is open
+        if (isOpen) {
+            document.body.style.overflow = "hidden";
+        } else {
+            document.body.style.overflow = "";
+        }
+    }, [isOpen]);
 
     const toggleMenu = () => {
         setIsOpen(!isOpen);
