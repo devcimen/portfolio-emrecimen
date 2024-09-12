@@ -16,6 +16,7 @@ interface NavElementProps {
 }
 
 const NavElement: FC<NavElementProps> = ({ href, text, variants, isOpen, onClick }) => {
+
     return (
         <motion.li
             className="relative group transition-colors duration-300"
@@ -31,9 +32,9 @@ const NavElement: FC<NavElementProps> = ({ href, text, variants, isOpen, onClick
             onClick={onClick}
         >
             <Link href={href}>
-                <div className="block w-full mb-4 text-gray-300 text-3xl group-hover:text-gray-100 transition duration-300">
+                <motion.div className="block w-full mb-4 text-gray-300 text-3xl group-hover:text-gray-100 transition duration-300" >
                     {text}
-                </div>
+                </motion.div>
             </Link>
             {/* Underline */}
             <motion.div

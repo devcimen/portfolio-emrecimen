@@ -10,6 +10,14 @@ interface TagProps {
     type?: 'primary' | 'secondary';
 }
 
+// Animation configuration
+const animationConfig = {
+    initial: { opacity: 0, scale: 0.8 },
+    whileInView: { opacity: 1, scale: 1 },
+    vieport: { once: true },
+    transition: { duration: 2, ease: [0.6, 0.01, 0.1, 0.95] },
+};
+
 const Tag: FC<TagProps> = ({ text, type = 'primary' }) => {
     const styles = {
         primary: "inline-block px-2 py-2 border border-gray-100 text-gray-400 text-xs rounded-full",
@@ -19,10 +27,7 @@ const Tag: FC<TagProps> = ({ text, type = 'primary' }) => {
     return (
         <motion.div
             className={styles[type]}
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
+            {...animationConfig}
         >
             {text}
         </motion.div>

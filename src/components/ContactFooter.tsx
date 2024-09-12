@@ -2,51 +2,58 @@
 // Its a footer component that contains the contact information
 
 import { FC } from "react";
-import { motion } from "framer-motion";
+import { delay, motion } from "framer-motion";
+
+// Animation configuration
+const animationConfig = {
+    initial: { opacity: 0, scale: 0.8 },
+    whileInView: { opacity: 1, scale: 1 },
+    vieport: { once: true },
+    transition: { duration: 2, ease: [0.6, 0.01, 0.1, 0.95], delay: 0.4 },
+};
+
+const animationConfigText = {
+    initial: { opacity: 0, y: 20 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
+    transition: { 
+        duration: 2,
+        ease: [0.42, 0, 0.58, 1],
+    },
+};
+
+const animationConfigSplit = {
+    initial: { scaleX: 0, transformOrigin: 'left' },
+    whileInView: { scaleX: 1 },
+    vieport: { once: true },
+    transition: { duration: 2 },
+};
 
 const ContactFooter: FC = () => {
     return (
         <>
-            <motion.div
-                className="w-full h-0.5 bg-gray-100 mb-14"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1 }}
-            />
-
             <motion.footer
-                className="flex flex-col mb-6 px-4 py-8 bg-gray-000 rounded-lg border-2 border-gray-100"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
+                className="flex flex-col my-14 mx-6 px-4 py-4 bg-gray-000 rounded-lg border-2 border-gray-100"
+                {...animationConfigText}
             >
-                <div className="mb-8">
+                {/* <div className="mb-2">
                     <motion.p
                         className="text-l font-semibold text-gray-FFF mb-2"
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1 }}
+                        {...animationConfigText}
                     >
                         You want to work together?
                     </motion.p>
                     <motion.p
                         className="text-base text-gray-300"
-                        initial={{ opacity: 0, y: 10 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 1, delay: 0.2 }}
+                        {...animationConfigText}
                     >
-                        Feel free to contact me via my socials
+                        Feel free to contact me
                     </motion.p>
-                </div>
+                </div> */}
 
                 <motion.div
-                    className="flex justify-between space-x-8 font-extralight text-gray-FFF"
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.8, delay: 0.3 }}
+                    className="flex justify-between space-x-8 font-extralight text-gray-FFF mb-4"
+                    {...animationConfig}
                 >
                     <a href="https://github.com/devcimen" className="hover:underline">
                         GitHub
@@ -58,12 +65,13 @@ const ContactFooter: FC = () => {
                         Email
                     </a>
                 </motion.div>
-
                 <motion.div
-                    className="text-gray-600 text-xs mt-8 text-blur-xs"
-                    initial={{ opacity: 0, y: 10 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 1, delay: 0.4 }}
+                    className="w-full h-0.5 bg-gray-100 px"
+                    {...animationConfigSplit}
+                />
+                <motion.div
+                    className="text-gray-600 text-xs mt-4 text-blur-xs flex justify-center items-center"
+                    {...animationConfigText}
                 >
                     © 2024 EMRE CIMEN all rights reserved
                 </motion.div>
