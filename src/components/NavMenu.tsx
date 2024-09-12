@@ -34,13 +34,13 @@ const NavMenu: FC = () => {
 
     // Variants for the menu container and menu items
     const menuVariants = {
-        open: { opacity: 1, y: 0, transition: { duration: 0.7 } },
-        closed: { opacity: 0, y: "-100%", transition: { duration: 0.35 } },
+        open: { opacity: 1, y: 0, transition: { duration: 1.2 } },
+        closed: { opacity: 0, y: "-100%", transition: { duration: 0.7 } },
     };
 
     const itemVariants = {
-        open: { opacity: 1, y: 0, transition: { duration: 0.7 } },
-        closed: { opacity: 0, y: "-20px", transition: { duration: 0.35 } },
+        open: { opacity: 1, y: 0, transition: { duration: 1.2 } },
+        closed: { opacity: 0, y: "-20px", transition: { duration: 0.7 } },
     };
 
     return (
