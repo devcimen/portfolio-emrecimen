@@ -8,6 +8,7 @@ import { motion } from 'framer-motion';
 import Header from '../components/Header';
 import Tag from '@/components/Tag';
 import Image from 'next/image';
+import ContactFooter from '@/components/ContactFooter';
 
 const Home: NextPage = () => {
     return (
@@ -15,7 +16,7 @@ const Home: NextPage = () => {
             <div className="flex flex-col min-h-screen mx-6">
                 <Head>
                     <title>HomePage</title>
-                    <link rel="icon" href="/assets/favicon.ico" />
+                    <link rel="icon" href="/assets/huhn.ico" />
                 </Head>
                 <Header />
 
@@ -41,7 +42,7 @@ const Home: NextPage = () => {
                     >
                         EMRE CIMEN
                     </motion.h1>
-                    <div className="flex flex-row justify-between mt-6">
+                    <div className="flex flex-row justify-between mt-6 mb-14">
                         <a href="https://github.com/devcimen" className="font-extralight hover:underline">
                             GitHub
                         </a>
@@ -54,8 +55,16 @@ const Home: NextPage = () => {
                     </div>
                 </section>
 
+                <motion.div
+                    className="w-full h-0.5 bg-gray-100 mb-14"
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 1 }}
+                />
+
                 {/* About section */}
-                <section id='about' className="mt-20 flex flex-col relative">
+                <section id='about' className="flex flex-col relative mb-14">
                     <div className='flex items-start w-full'>
                         <Tag text=".aboutme" type='primary' />
                         <div className="relative ml-auto">
@@ -101,7 +110,7 @@ const Home: NextPage = () => {
                 </section>
 
                 {/* Skills section */}
-                <section id='skills' className="mt-20 flex flex-col relative mb-40">
+                <section id='skills' className="flex flex-col relative mb-14">
                     <div className='flex items-start w-full'>
                         <Tag text=".skills" type='primary' />
                     </div>
@@ -124,6 +133,9 @@ const Home: NextPage = () => {
                         </motion.div>
                     </div>
                 </section>
+
+                <ContactFooter />
+
             </div>
         </div>
     );
