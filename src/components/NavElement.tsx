@@ -11,23 +11,37 @@ interface NavElementProps {
     href: string;
     text: string;
     variants: any;
+    isOpen: boolean;
     onClick: () => void;
 }
 
-const NavElement: FC<NavElementProps> = ({ href, text, variants, onClick  }) => {
+const NavElement: FC<NavElementProps> = ({ href, text, variants, isOpen, onClick }) => {
     return (
         <motion.li
             className="relative group transition-colors duration-300"
+            whileHover={{
+                scale: 1,
+                transition: {
+                    duration: 0.5
+                },
+                x: 10,
+                y: -1
+            }}
             variants={variants}
             onClick={onClick}
         >
             <Link href={href}>
-                <div className="block w-full mb-1 text-gray-FFF text-2xl">
+                <div className="block w-full mb-4 text-gray-300 text-3xl group-hover:text-gray-100 transition duration-300">
                     {text}
                 </div>
             </Link>
             {/* Underline */}
-            <div className="w-full h-0.5 bg-gray-100 opacity-0 group-hover:opacity-100 group-hover:scale-x-100 transition-transform origin-left transform scale-x-0 duration-1000" />
+            <motion.div
+                className="w-full h-0.5 bg-gray-300 transition-transform origin-left transform"
+                initial={{ scaleX: 0 }}
+                animate={{ scaleX: isOpen ? 1 : 0 }}
+                transition={{ duration: 2 }}
+            />
         </motion.li>
     );
 }

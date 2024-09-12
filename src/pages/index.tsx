@@ -17,6 +17,8 @@ const Home: NextPage = () => {
                 <Head>
                     <title>HomePage</title>
                     <link rel="icon" href="/assets/huhn.ico" />
+                    <meta name='theme-color' content='#242526' />
+                    <meta name='apple-mobile-web-app-status-bar-style' content='#242526' />
                 </Head>
                 <Header />
 
