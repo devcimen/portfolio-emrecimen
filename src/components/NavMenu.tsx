@@ -75,31 +75,35 @@ const NavMenu: FC = () => {
             >
                 <motion.ul className="space-y-10 text-white text-2xl mx-6 mt-16">
                     <NavElement
-                        href="/projects"
+                        // TODO: Add href prop
+                        href="/"
                         text="Selected Projects"
                         variants={itemVariants}
                         onClick={toggleMenu}
                     />
                     <NavElement
-                        href="/photography"
+                        // TODO: Add href prop
+                        href="/"
                         text="Photography"
                         variants={itemVariants}
                         onClick={toggleMenu}
                     />
                     <NavElement
-                        href="/book-reviews"
+                        // TODO: Add href prop
+                        href="/"
                         text="Book Reviews"
                         variants={itemVariants}
                         onClick={toggleMenu}
                     />
                     <NavElement
-                        href="/blog"
+                        // TODO: Add href prop
+                        href="/"
                         text="Blog"
                         variants={itemVariants}
                         onClick={toggleMenu}
                     />
                     <NavElement
-                        href="/about"
+                        href="/#about"
                         text="About"
                         variants={itemVariants}
                         onClick={toggleMenu}

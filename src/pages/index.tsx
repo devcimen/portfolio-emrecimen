@@ -55,16 +55,15 @@ const Home: NextPage = () => {
                     </div>
                 </section>
 
-                <motion.div
-                    className="w-full h-0.5 bg-gray-100 mb-14"
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 1 }}
-                />
-
                 {/* About section */}
                 <section id='about' className="flex flex-col relative mb-14">
+                    <motion.div
+                        className="w-full h-0.5 bg-gray-100 mb-14"
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 1 }}
+                    />
                     <div className='flex items-start w-full'>
                         <Tag text=".aboutme" type='primary' />
                         <div className="relative ml-auto">
