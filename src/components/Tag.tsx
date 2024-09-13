@@ -3,7 +3,7 @@
 
 import { FC } from "react";
 import { motion } from "framer-motion";
-import { animationConfig } from "@/utils/animationConfig";
+import { animationConfig, animationConfigHover } from "@/utils/animationConfig";
 
 // Tag Props
 interface TagProps {
@@ -14,13 +14,14 @@ interface TagProps {
 const Tag: FC<TagProps> = ({ text, type = 'primary' }) => {
     const styles = {
         primary: "inline-block px-2 py-2 border border-gray-100 text-gray-400 text-xs rounded-full",
-        secondary: "inline-block px-2 py-2 border border-gray-FFF text-gray-FFF text-base rounded-lg"
+        secondary: "inline-block px-2 py-2 border border-gray-FFF text-gray-FFF text-base rounded-lg whitespace-nowrap"
     };
 
     return (
         <motion.div
             className={styles[type]}
             {...animationConfig}
+            {...(type === 'secondary' ? animationConfigHover : {})}
         >
             {text}
         </motion.div>

@@ -34,3 +34,13 @@ export const animationConfigSkills = {
     viewport: { once: true },
     transition: { duration: 2, staggerChildren: 0.4 },
 };
+
+export const animationConfigHover = {
+    whileHover: {
+        scale: 1.05,
+        backgroundColor: "#FFFFFF",
+        color: "#242526",
+        borderColor: "#242526",
+        transition: { duration: 0.3 }
+    }
+};

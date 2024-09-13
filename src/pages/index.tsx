@@ -104,9 +104,9 @@ const Home: NextPage = () => {
                     <div className='flex items-start w-full'>
                         <Tag text=".skills" type='primary' />
                     </div>
-                    <div className='mt-6 flex flex-wrap'>
+                    <div className='mt-6'>
                         <motion.div
-                            className='flex flex-wrap gap-2'
+                            className='flex flex-wrap gap-4 justify-start'
                             {...animationConfigSkills}
                         >
                             <Tag text="UX / UI" type="secondary" />
