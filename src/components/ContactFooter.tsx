@@ -9,7 +9,7 @@ const ContactFooter: FC = () => {
     return (
         <>
             <motion.footer
-                className="flex flex-col my-14 mx-6 px-4 py-4 bg-gray-000 rounded-lg border-2 border-gray-100"
+                className="flex flex-col my-14 lg:my-32 mx-6 p-4 lg:p-24 bg-gray-000 rounded-lg border-2 border-gray-100"
                 {...animationConfigText}
             >
                 {/* <div className="mb-2">
@@ -28,16 +28,16 @@ const ContactFooter: FC = () => {
                 </div> */}
 
                 <motion.div
-                    className="flex justify-between space-x-8 font-extralight text-gray-FFF mb-4"
+                    className="flex justify-between space-x-8 font-extralight text-gray-FFF mb-4 lg:mb-16"
                     {...animationConfig}
                 >
-                    <a href="https://github.com/devcimen" className="hover:underline">
+                    <a href="https://github.com/devcimen" className="hover:underline lg:text-3xl">
                         GitHub
                     </a>
-                    <a href="https://www.linkedin.com/in/emre-cimen-980257234/" className="hover:underline">
+                    <a href="https://www.linkedin.com/in/emre-cimen-980257234/" className="hover:underline lg:text-3xl">
                         LinkedIn
                     </a>
-                    <a href="mailto:emre.cimen07@gmail.com" className="hover:underline">
+                    <a href="mailto:emre.cimen07@gmail.com" className="hover:underline lg:text-3xl">
                         Email
                     </a>
                 </motion.div>
@@ -46,7 +46,7 @@ const ContactFooter: FC = () => {
                     {...animationConfigSplit}
                 />
                 <motion.div
-                    className="text-gray-600 text-xs mt-4 text-blur-xs flex justify-center items-center"
+                    className="text-gray-600 text-xs mt-4 lg:mt-16 text-blur-xs flex justify-center items-center lg:text-sm"
                     {...animationConfigText}
                 >
                     © 2024 EMRE CIMEN all rights reserved

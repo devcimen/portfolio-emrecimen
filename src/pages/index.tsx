@@ -23,19 +23,19 @@ const Home: NextPage = () => {
                 </Head>
                 <Header />
                 {/* Main section */}
-                <section id='main' className="flex flex-col justify-between" style={{ minHeight: 'calc(100vh - 64px)' }}>
+                <section id='main' className="flex flex-col justify-between mb-10 lg:mb-32" style={{ minHeight: 'calc(100vh - 64px)' }}>
                     <div className='flex items-center justify-center' style={{ marginTop: '30vh' }}>
                         <motion.p
-                            className="text-base text-gray-FFF text-justify w-60 leading-4 font-light"
+                            className="text-base lg:text-xl text-gray-FFF text-justify w-60 lg:w-72 leading-4 font-light"
                             {...animationConfig}
                         >
                             A SOFTWARE DEVELOPER BASED IN SWITZERLAND (SOLOTHURN)
                         </motion.p>
                     </div>
 
-                    <div className='px-6 mb-10'>
+                    <div className='px-6 mb-4'>
                         <motion.h1
-                            className="text-[12vw] font-semibold text-gray-FFF leading-none tracking-[0.02em] text-blur-l w-full"
+                            className="text-[12vw] lg:text-[13vw] font-semibold text-gray-FFF leading-none tracking-[0.02em] blur-sm lg:blur-md w-full"
                             style={{
                                 whiteSpace: "nowrap",
                                 letterSpacing: "0.01em",
@@ -46,34 +46,34 @@ const Home: NextPage = () => {
                         </motion.h1>
 
                         <motion.div className="flex flex-row justify-between mt-6" {...animationConfig}>
-                            <a href="https://github.com/devcimen" className="font-extralight hover:underline">
+                            <a href="https://github.com/devcimen" className="font-extralight lg:text-3xl hover:underline">
                                 GitHub
                             </a>
-                            <a href="https://www.linkedin.com/in/emre-cimen-980257234/" className="font-extralight hover:underline">
+                            <a href="https://www.linkedin.com/in/emre-cimen-980257234/" className="font-extralight lg:text-3xl hover:underline">
                                 LinkedIn
                             </a>
-                            <a href="mailto:emre.cimen07@gmail.com" className="font-extralight hover:underline">
+                            <a href="mailto:emre.cimen07@gmail.com" className="font-extralight lg:text-3xl hover:underline">
                                 Email
                             </a>
                         </motion.div>
                     </div>
                 </section>
                 <motion.div
-                    className="w-full h-0.5 bg-gray-100"
+                    className="w-full h-0.5 lg:h-2 bg-gray-100"
                     {...animationConfigSplit}
                 />
                 {/* About section */}
-                <section id='about' className="flex flex-col relative my-14 px-6">
+                <section id='about' className="flex flex-col relative my-14 px-6 lg:my-32">
                     <div className='flex items-start w-full'>
                         <Tag text=".aboutme" type='primary' />
                         <div className="relative ml-auto">
                             <motion.div
-                                className="w-60 h-48 relative"
+                                className="w-[60vw] lg:w-[50vw] h-48 lg:h-[60vh] relative"
                                 {...animationConfig}
                             >
                                 <div className='w-full h-full grayscale'>
                                     <Image
-                                        src="/photos/000074390001.JPEG"
+                                        src="/photos/DSC02450.JPG"
                                         alt="Picture of Emre Cimen"
                                         layout="fill"
                                         objectFit="cover"
@@ -84,13 +84,13 @@ const Home: NextPage = () => {
                     </div>
 
                     <motion.h2
-                        className="absolute top-36 left-6 transform -translate-y-1/2 translate-x-2 text-3xl font-semibold text-gray-FFF leading-tight text-blur-s"
+                        className="absolute top-36 left-6 lg:top-[25rem] transform -translate-y-1/2 translate-x-2 text-3xl lg:text-[6vw] lg:blur-sm font-semibold text-gray-FFF leading-tight text-blur-s"
                         {...animationConfigText}
                     >
                         I design <br /> and code websites.
                     </motion.h2>
                     <motion.p
-                        className="text-base text-gray-300 leading-relaxed font-light mt-10 relative z-10"
+                        className="lg:absolute text-base text-justify leading-2 lg:top-[3rem] lg:w-[40vw] lg:text-3xl text-gray-FFF font-extralight mt-10 relative z-10"
                         {...animationConfigText}
                     >
                         Driven by a fusion of art and coding, I specialize in web and mobile development, crafting elegant solutions that bridge functionality and visual finesse.
@@ -100,13 +100,13 @@ const Home: NextPage = () => {
                 </section>
 
                 {/* Skills section */}
-                <section id='skills' className="flex flex-col relative mb-14 px-6">
+                <section id='skills' className="flex flex-col relative mb-14 lg:mb-32 px-6">
                     <div className='flex items-start w-full'>
                         <Tag text=".skills" type='primary' />
                     </div>
                     <div className='mt-6'>
                         <motion.div
-                            className='flex flex-wrap gap-4 justify-start'
+                            className='flex flex-wrap gap-4 lg:gap-6 justify-start'
                             {...animationConfigSkills}
                         >
                             <Tag text="UX / UI" type="secondary" />
@@ -122,7 +122,7 @@ const Home: NextPage = () => {
                 </section>
 
                 <motion.div
-                    className="w-full h-0.5 bg-gray-100 px"
+                    className="w-full h-0.5 lg:h-2 bg-gray-100"
                     {...animationConfigSplit}
                 />
                 {/* Contact Footer */}

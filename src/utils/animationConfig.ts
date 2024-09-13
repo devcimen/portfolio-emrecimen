@@ -9,7 +9,7 @@ export const animationConfigText = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true },
-    transition: { 
+    transition: {
         duration: 2,
         ease: [0.42, 0, 0.58, 1],
     },
@@ -38,9 +38,7 @@ export const animationConfigSkills = {
 export const animationConfigHover = {
     whileHover: {
         scale: 1.05,
-        backgroundColor: "#FFFFFF",
-        color: "#242526",
-        borderColor: "#242526",
-        transition: { duration: 0.3 }
+        backgroundColor: "#3A3C3D",
+        transition: { duration: 1, ease: [0.25, 0.1, 0.25, 1] }
     }
 };

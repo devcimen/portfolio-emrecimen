@@ -20,6 +20,11 @@ html {
   padding-bottom: env(safe-area-inset-bottom);
 }
 
+.text-blur-xl {
+  color: transparent;
+  text-shadow: 0 0 24px rgba(255, 255, 255, 1);
+}
+
 .text-blur-l {
   color: transparent;
   text-shadow: 0 0 8px rgba(255, 255, 255, 1);
