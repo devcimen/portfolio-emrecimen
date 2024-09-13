@@ -3,20 +3,13 @@
 
 import { FC } from "react";
 import { motion } from "framer-motion";
+import { animationConfig } from "@/utils/animationConfig";
 
 // Tag Props
 interface TagProps {
     text: string;
     type?: 'primary' | 'secondary';
 }
-
-// Animation configuration
-const animationConfig = {
-    initial: { opacity: 0, scale: 0.8 },
-    whileInView: { opacity: 1, scale: 1 },
-    vieport: { once: true },
-    transition: { duration: 2, ease: [0.6, 0.01, 0.1, 0.95] },
-};
 
 const Tag: FC<TagProps> = ({ text, type = 'primary' }) => {
     const styles = {

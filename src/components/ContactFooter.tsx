@@ -3,31 +3,7 @@
 
 import { FC } from "react";
 import { delay, motion } from "framer-motion";
-
-// Animation configuration
-const animationConfig = {
-    initial: { opacity: 0, scale: 0.8 },
-    whileInView: { opacity: 1, scale: 1 },
-    vieport: { once: true },
-    transition: { duration: 2, ease: [0.6, 0.01, 0.1, 0.95], delay: 0.4 },
-};
-
-const animationConfigText = {
-    initial: { opacity: 0, y: 20 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
-    transition: { 
-        duration: 2,
-        ease: [0.42, 0, 0.58, 1],
-    },
-};
-
-const animationConfigSplit = {
-    initial: { scaleX: 0, transformOrigin: 'left' },
-    whileInView: { scaleX: 1 },
-    vieport: { once: true },
-    transition: { duration: 2 },
-};
+import { animationConfig, animationConfigSplit, animationConfigText } from "@/utils/animationConfig";
 
 const ContactFooter: FC = () => {
     return (

@@ -9,38 +9,7 @@ import Header from '../components/Header';
 import Tag from '@/components/Tag';
 import Image from 'next/image';
 import ContactFooter from '@/components/ContactFooter';
-
-// Animation configuration
-const animationConfig = {
-    initial: { opacity: 0, scale: 0.8 },
-    whileInView: { opacity: 1, scale: 1 },
-    vieport: { once: true },
-    transition: { duration: 2, ease: [0.6, 0.01, 0.1, 0.95], delay: 0.4 },
-};
-
-const animationConfigSplit = {
-    initial: { scaleX: 0, transformOrigin: 'left' },
-    whileInView: { scaleX: 1 },
-    vieport: { once: true },
-    transition: { duration: 2 },
-};
-
-const animationConfigText = {
-    initial: { opacity: 0, y: 20 },
-    whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true },
-    transition: { 
-        duration: 2,
-        ease: [0.42, 0, 0.58, 1],
-    },
-};
-
-const animationConfigSkills = {
-    initial: { opacity: 0, scale: 0.9 },
-    whileInView: { opacity: 1, scale: 1 },
-    viewport: { once: true },
-    transition: { duration: 2, staggerChildren: 0.4 },
-};
+import { animationConfig, animationConfigSkills, animationConfigSplit, animationConfigText } from '@/utils/animationConfig';
 
 const Home: NextPage = () => {
     return (
@@ -54,8 +23,8 @@ const Home: NextPage = () => {
                 </Head>
                 <Header />
                 {/* Main section */}
-                <section id='main'>
-                    <div className='flex items-center justify-center mt-64'>
+                <section id='main' className="flex flex-col justify-between" style={{ minHeight: 'calc(100vh - 64px)' }}>
+                    <div className='flex items-center justify-center' style={{ marginTop: '30vh' }}>
                         <motion.p
                             className="text-base text-gray-FFF text-justify w-60 leading-4 font-light"
                             {...animationConfig}
@@ -63,14 +32,20 @@ const Home: NextPage = () => {
                             A SOFTWARE DEVELOPER BASED IN SWITZERLAND (SOLOTHURN)
                         </motion.p>
                     </div>
-                    <div className='px-6 mt-96'>
+
+                    <div className='px-6 mb-10'>
                         <motion.h1
-                            className="text-5xl font-semibold text-color-primary leading-6 tracking-tight text-blur-l"
+                            className="text-[12vw] font-semibold text-gray-FFF leading-none tracking-[0.02em] text-blur-l w-full"
+                            style={{
+                                whiteSpace: "nowrap",
+                                letterSpacing: "0.01em",
+                            }}
                             {...animationConfig}
                         >
                             EMRE CIMEN
                         </motion.h1>
-                        <motion.div className="flex flex-row justify-between mt-6 mb-14" {...animationConfig}>
+
+                        <motion.div className="flex flex-row justify-between mt-6" {...animationConfig}>
                             <a href="https://github.com/devcimen" className="font-extralight hover:underline">
                                 GitHub
                             </a>

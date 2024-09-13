@@ -1,13 +1,7 @@
 import { FC } from "react";
 import { motion } from "framer-motion";
 import NavMenu from "./NavMenu";
-
-// Animation configuration
-const animationConfig = {
-    initial: { opacity: 0, scale: 0.8 },
-    animate: { opacity: 1, scale: 1 },
-    transition: { duration: 2, ease: [0.6, 0.01, 0.1, 0.95] },
-};
+import { animationConfigHeader } from "@/utils/animationConfig";
 
 // Header component
 const Header: FC = () => {
@@ -20,7 +14,7 @@ const Header: FC = () => {
     return (
         <motion.header
             className="flex justify-between items-center w-full py-4 sticky top-0 z-50 px-6"
-            {...animationConfig}
+            {...animationConfigHeader}
         >
             <motion.div
                 className="text-xl font-semibold text-color-primary leading-6 tracking-tight text-blur-s"
