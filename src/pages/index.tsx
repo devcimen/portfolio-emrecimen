@@ -10,18 +10,18 @@ import Tag from '@/components/Tag';
 import Image from 'next/image';
 import ContactFooter from '@/components/ContactFooter';
 import { animationConfig, animationConfigSkills, animationConfigSplit, animationConfigText } from '@/utils/animationConfig';
+import Layout from '@/components/Layout';
 
 const Home: NextPage = () => {
     return (
-        <div className="bg-gray-000 text-gray-FFF">
-            <div className="flex flex-col min-h-screen">
+        <Layout>
+            
                 <Head>
                     <title>HomePage</title>
                     <link rel="icon" href="/assets/huhn.ico" />
                     <meta name='theme-color' content='#242526' />
                     <meta name='apple-mobile-web-app-status-bar-style' content='#242526' />
                 </Head>
-                <Header />
                 {/* Main section */}
                 <section id='main' className="flex flex-col justify-between mb-10 lg:mb-32" style={{ minHeight: 'calc(100vh - 64px)' }}>
                     <div className='flex items-center justify-center' style={{ marginTop: '30vh' }}>
@@ -100,7 +100,7 @@ const Home: NextPage = () => {
                 </section>
 
                 {/* Skills section */}
-                <section id='skills' className="flex flex-col relative mb-14 lg:mb-32 px-6">
+                <section id='skills' className="flex flex-col relative my-14 lg:my-32 px-6">
                     <div className='flex items-start w-full'>
                         <Tag text=".skills" type='primary' />
                     </div>
@@ -125,11 +125,8 @@ const Home: NextPage = () => {
                     className="w-full h-0.5 lg:h-2 bg-gray-100"
                     {...animationConfigSplit}
                 />
-                {/* Contact Footer */}
-                <ContactFooter />
-
-            </div>
-        </div>
+            {/* </div> */}
+        </Layout>
     );
 };
 

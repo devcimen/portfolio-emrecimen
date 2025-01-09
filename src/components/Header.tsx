@@ -25,7 +25,7 @@ const Header: FC = () => {
                 {formattedDate}
             </motion.div>
             <motion.div
-                className="text-white text-2xl font-semibold leading-6 tracking-tight"
+                className="text-white text-2xl font-semibold leading-6 tracking-tight flex flex-row gap-10 items-center"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ duration: 1, delay: 0.3 }}
