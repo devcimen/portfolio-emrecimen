@@ -8,7 +8,7 @@ import { animationConfig, animationConfigHover } from "@/utils/animationConfig";
 // Tag Props
 interface TagProps {
     text: string;
-    type?: 'primary' | 'secondary';
+    type?: 'primary' | 'secondary' | 'primarySmall';
 }
 
 const Tag: FC<TagProps> = ({ text, type = 'primary' }) => {
