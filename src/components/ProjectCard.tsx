@@ -22,13 +22,13 @@ const ProjectCard: FC<ProjectCard> = ({ title, tags, image, video, link }) => {
 
     return (
         <motion.div
-            className="cursor-pointer rounded-lg overflow-hidden"
+            className="cursor-pointer overflow-hidden"
             onClick={() => router.push(link)}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             whileHover={{ scale: 1.02, transition: { duration: 0.5 } }}
         >
-            <motion.div className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden">
+            <motion.div className="relative w-full h-64 md:h-80 lg:h-96 overflow-hidden rounded-lg">
                 {isHovered && video ? (
                     <video
                         src={video}
@@ -48,16 +48,11 @@ const ProjectCard: FC<ProjectCard> = ({ title, tags, image, video, link }) => {
             </motion.div>
             <motion.div className="py-4 flex flex-col gap-2" >
                 <motion.p className="text-3xl text-gray-FFF" {...animationConfigText}>{title}</motion.p>
-
                 <div className="flex flex-wrap gap-2">
                     {tags.map((tag, index) => (
                         <Tag key={index} text={tag} type="primarySmall" />
                     ))}
                 </div>
-                <motion.div
-                    className="w-full h-0.5 bg-gray-100 my-2"
-                    {...animationConfigSplit}
-                />
             </motion.div>
         </motion.div>
     );

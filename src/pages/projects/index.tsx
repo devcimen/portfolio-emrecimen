@@ -3,7 +3,7 @@
 
 import Header from "@/components/Header";
 import ProjectCard from "@/components/ProjectCard";
-import { childVariants, containerVariants } from "@/utils/animationConfig";
+import { animationConfigSplit, childVariants, containerVariants } from "@/utils/animationConfig";
 import { projects } from "@/utils/projects";
 import { motion } from "framer-motion";
 import Head from "next/head";
@@ -37,6 +37,10 @@ const Projects: FC = () => {
                                 image={project.image}
                                 video={project.video}
                                 link={project.link}
+                            />
+                            <motion.div
+                                className="w-full h-0.5 bg-gray-100 my-2"
+                                {...animationConfigSplit}
                             />
                         </motion.div>
                     ))}

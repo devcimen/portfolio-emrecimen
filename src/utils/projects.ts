@@ -32,13 +32,13 @@ const projects = [
     //     image: "/projects/emotion-scape-mockup.png",
     //     link: "/projects/emotion-scape",
     // },
-    {
-        title: "Evolve",
-        tags: ["Design System", "Web Design"],
-        image: "/projects/evolve-mockup.png",
-        video: "",
-        link: "/projects/evolve",
-    },
+    // {
+    //     title: "Evolve",
+    //     tags: ["Design System", "Web Design"],
+    //     image: "/projects/evolve-mockup.png",
+    //     video: "",
+    //     link: "/projects/evolve",
+    // },
     // {
     //     title: "Mystical Fortune",
     //     tags: ["Frontend Development", "Game Design"],
@@ -53,7 +53,7 @@ const projectDetails = [
         title: "Emotion Scape",
         description: "EmotionScape is an interactive web application that visualizes emotions in a dynamic and artistic way. Users can select from a range of emotions—such as Happy, Sad, Angry, and more—and watch as the background transforms into vibrant, organic animations that represent their feelings. Each emotion and combination is uniquely visualized with colors, shapes, and animations, creating an engaging and personalized experience.",
         tags: ["Frontend Development", "Web Design"],
-        images: ["/projects/emotion-scape/1.webp", "/projects/emotion-scape/2.webp", "/projects/emotion-scape/3.webp", "/projects/emotion-scape/4.webp"],
+        images: ["/projects/emotion-scape/1.png", "/projects/emotion-scape/2.png", "/projects/emotion-scape/3.png", "/projects/emotion-scape/4.png", "/projects/emotion-scape/5.png", "/projects/emotion-scape/6.png"],
     },
     {
         id: "evolve",
