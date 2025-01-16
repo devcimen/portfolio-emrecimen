@@ -5,6 +5,13 @@ export const animationConfig = {
     transition: { duration: 2, ease: [0.6, 0.01, 0.1, 0.95], delay: 0.4 },
 };
 
+export const animationConfigProjectCard = {
+    initial: { opacity: 0, scale: 0.9 },
+    whileInView: { opacity: 1, scale: 1 },
+    viewport: { once: true },
+    transition: { duration: 4, ease: [0.8, 0.01, 0.1, 0.95], delay: 0.4 },
+};
+
 export const animationConfigText = {
     initial: { opacity: 0, y: 20 },
     whileInView: { opacity: 1, y: 0 },
@@ -41,4 +48,31 @@ export const animationConfigHover = {
         backgroundColor: "#3A3C3D",
         transition: { duration: 1, ease: [0.25, 0.1, 0.25, 1] }
     }
+};
+
+export const containerVariants = {
+    hidden: {
+        opacity: 0,
+    },
+    show: {
+        opacity: 1,
+        transition: {
+            staggerChildren: 0.4,
+        },
+    },
+};
+
+export const childVariants = {
+    hidden: {
+        opacity: 0,
+        scale: 0.9,
+    },
+    show: {
+        opacity: 1,
+        scale: 1,
+        transition: {
+            duration: 2,
+            ease: [0.8, 0.01, 0.1, 0.95],
+        },
+    },
 };

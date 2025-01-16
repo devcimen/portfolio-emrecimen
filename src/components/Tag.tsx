@@ -14,7 +14,8 @@ interface TagProps {
 const Tag: FC<TagProps> = ({ text, type = 'primary' }) => {
     const styles = {
         primary: "inline-block p-2 lg:p-4 border border-gray-100 text-gray-400 text-xs lg:text-2xl rounded-full",
-        secondary: "inline-block p-2 lg:p-16 lg:text-5xl lg:p-4 border border-gray-FFF text-gray-FFF text-base rounded-lg whitespace-nowrap"
+        secondary: "inline-block p-2 lg:p-16 lg:text-5xl lg:p-4 border border-gray-FFF text-gray-FFF text-base rounded-lg whitespace-nowrap",
+        primarySmall: "inline-block p-2 lg:p-2 border border-gray-100 text-gray-400 text-xxs lg:text-l rounded-full",
     };
 
     return (

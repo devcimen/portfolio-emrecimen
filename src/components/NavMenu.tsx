@@ -71,7 +71,7 @@ const NavMenu: FC = () => {
                 variants={menuVariants}
             >
                 <motion.ul className="flex flex-col space-y-10">
-                    <NavElement href="/" text="Projects" variants={itemVariants} isOpen={isOpen} onClick={toggleMenu} />
+                    <NavElement href="/projects" text="Projects" variants={itemVariants} isOpen={isOpen} onClick={toggleMenu} />
                     <NavElement href="/" text="Photography" variants={itemVariants} isOpen={isOpen} onClick={toggleMenu} />
                     <NavElement href="/" text="Literature" variants={itemVariants} isOpen={isOpen} onClick={toggleMenu} />
                     <NavElement href="/" text="Blog" variants={itemVariants} isOpen={isOpen} onClick={toggleMenu} />

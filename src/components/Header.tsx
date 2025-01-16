@@ -2,6 +2,7 @@ import { FC } from "react";
 import { motion } from "framer-motion";
 import NavMenu from "./NavMenu";
 import { animationConfigHeader } from "@/utils/animationConfig";
+import Link from "next/link";
 
 // Header component
 const Header: FC = () => {
@@ -16,14 +17,16 @@ const Header: FC = () => {
             className="flex justify-between items-center w-full py-4 sticky top-0 z-50 px-6"
             {...animationConfigHeader}
         >
-            <motion.div
-                className="text-xl font-semibold text-color-primary leading-6 tracking-tight text-blur-s"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-            >
-                {formattedDate}
-            </motion.div>
+            <Link href="/" >
+                <motion.div
+                    className="text-xl font-semibold text-color-primary leading-6 tracking-tight text-blur-s"
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 1 }}
+                >
+                    {formattedDate}
+                </motion.div>
+            </Link>
             <motion.div
                 className="text-white text-2xl font-semibold leading-6 tracking-tight flex flex-row gap-10 items-center"
                 initial={{ opacity: 0 }}
