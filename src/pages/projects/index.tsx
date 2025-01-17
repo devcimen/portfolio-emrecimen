@@ -38,10 +38,10 @@ const Projects: FC = () => {
                                 video={project.video}
                                 link={project.link}
                             />
-                            <motion.div
+                            {/* <motion.div
                                 className="w-full h-0.5 bg-gray-100 my-2"
                                 {...animationConfigSplit}
-                            />
+                            /> */}
                         </motion.div>
                     ))}
                 </motion.div>
