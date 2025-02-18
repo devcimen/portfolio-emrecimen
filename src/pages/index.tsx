@@ -16,10 +16,54 @@ const Home: NextPage = () => {
     return (
         <Layout>
             <Head>
-                <title>Home</title>
+                <title>Emre Cimen - Software Developer</title>
+                <meta name="description" content="Emre Cimen is a software developer based in Switzerland. Explore my portfolio, projects, and skills in web development and design." />
+                <meta name="keywords" content="Emre Cimen, Software Developer, Web Developer, UI/UX Designer, Frontend Developer, Backend Developer, Full Stack Developer, Switzerland, Portfolio" />
+                <meta name="author" content="Emre Cimen" />
+
+                {/* Open Graph for better social media sharing */}
+                <meta property="og:title" content="Emre Cimen - Software Developer" />
+                <meta property="og:description" content="Check out my portfolio and projects." />
+                <meta property="og:url" content="https://www.emrecimen.com" />
+                <meta property="og:type" content="website" />
+
+                {/* Twitter Card for Twitter SEO */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="Emre Cimen - Software Developer" />
+                <meta name="twitter:description" content="Explore my projects and skills in web development." />
+
+                {/* Favicon for branding */}
                 <link rel="icon" href="/assets/huhn.ico" />
+
+                {/* Theme color for mobile browsers */}
                 <meta name='theme-color' content='#242526' />
                 <meta name='apple-mobile-web-app-status-bar-style' content='#242526' />
+
+                {/* Mobile Optimization */}
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <script type="application/ld+json">
+                    {JSON.stringify({
+                        "@context": "https://schema.org",
+                        "@type": "Person",
+                        "name": "Emre Cimen",
+                        "url": "https://www.emrecimen.com",
+                        "sameAs": [
+                            "https://www.linkedin.com/in/emre-cimen-980257234/",
+                            "https://github.com/devcimen"
+                        ],
+                        "jobTitle": "Software Developer",
+                        "worksFor": {
+                            "@type": "Organization",
+                            "name": "SwissTeach AG"
+                        },
+                        "address": {
+                            "@type": "PostalAddress",
+                            "addressLocality": "Solothurn",
+                            "addressCountry": "Switzerland"
+                        }
+                    })}
+                </script>
+
             </Head>
             {/* Main section */}
             <section id='main' className="flex flex-col justify-between mb-10 lg:mb-32" style={{ minHeight: 'calc(100vh - 64px)' }}>
