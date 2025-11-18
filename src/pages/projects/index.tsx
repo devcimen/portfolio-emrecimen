@@ -3,7 +3,7 @@
 
 import Header from "@/components/Header";
 import ProjectCard from "@/components/ProjectCard";
-import { animationConfigSplit, childVariants, containerVariants } from "@/utils/animationConfig";
+import { animationConfigSplit, animationConfigText, childVariants, containerVariants } from "@/utils/animationConfig";
 import { projects } from "@/utils/projects";
 import { motion } from "framer-motion";
 import Head from "next/head";
@@ -20,6 +20,7 @@ const Projects: FC = () => {
                 <meta name='apple-mobile-web-app-status-bar-style' content='#242526' />
             </Head>
             <section className="text-gray-900 lg:px-6 lg:py-10 px-6 py-5">
+                <motion.h1 className="text-4xl mb-6" {...animationConfigText}>Projects</motion.h1>
                 <motion.div
                     className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
                     variants={containerVariants}

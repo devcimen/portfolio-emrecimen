@@ -50,6 +50,13 @@ export const animationConfigHover = {
     }
 };
 
+export const animationConfigDomeGallery = {
+    initial: { opacity: 0, scale: 0.95 },
+    whileInView: { opacity: 1, scale: 1 },
+    viewport: { once: true },
+    transition: { duration: 2, ease: [0.8, 0.01, 0.1, 0.95], delay: 1 },
+};
+
 export const containerVariants = {
     hidden: {
         opacity: 0,
