@@ -67,7 +67,7 @@ const ProjectCard: FC<ProjectCard> = ({ title, tags, image, video, link, externa
                     {externalLink && (
                         <Tag 
                             text="Visit Project" 
-                            type="visitProject" 
+                            type="link"
                             onClick={handleExternalLinkClick}
                         />
                     )}
