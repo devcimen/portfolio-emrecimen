@@ -72,10 +72,10 @@ const NavMenu: FC = () => {
             >
                 <motion.ul className="flex flex-col space-y-10">
                     <NavElement href="/projects" text="Projects" variants={itemVariants} isOpen={isOpen} onClick={toggleMenu} />
-                    <NavElement href="/" text="Photography" variants={itemVariants} isOpen={isOpen} onClick={toggleMenu} />
+                    {/* <NavElement href="/photography" text="Photography" variants={itemVariants} isOpen={isOpen} onClick={toggleMenu} />
                     <NavElement href="/" text="Literature" variants={itemVariants} isOpen={isOpen} onClick={toggleMenu} />
                     <NavElement href="/" text="Blog" variants={itemVariants} isOpen={isOpen} onClick={toggleMenu} />
-                    <NavElement href="/#about" text="About" variants={itemVariants} isOpen={isOpen} onClick={toggleMenu} />
+                    <NavElement href="/#about" text="About" variants={itemVariants} isOpen={isOpen} onClick={toggleMenu} /> */}
                 </motion.ul>
             </motion.nav>
         </>

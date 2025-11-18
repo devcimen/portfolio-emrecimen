@@ -37,6 +37,7 @@ const projectDetails = [
             "/projects/emotion-scape/5.png",
             "/projects/emotion-scape/6.png",
         ],
+        externalLink: "https://emotion-scape.vercel.app/"
     },
     {
         id: "evolve",

@@ -14,16 +14,28 @@ interface ProjectCard {
     image: string;
     video?: string;
     link: string;
+    externalLink?: string;
 }
 
-const ProjectCard: FC<ProjectCard> = ({ title, tags, image, video, link }) => {
+const ProjectCard: FC<ProjectCard> = ({ title, tags, image, video, link, externalLink }) => {
     const router = useRouter();
     const [isHovered, setIsHovered] = useState(false);
+
+    const handleCardClick = () => {
+        router.push(link);
+    };
+
+    const handleExternalLinkClick = (e?: React.MouseEvent) => {
+        e?.stopPropagation();
+        if (externalLink) {
+            window.open(externalLink, '_blank', 'noopener,noreferrer');
+        }
+    };
 
     return (
         <motion.div
             className="cursor-pointer overflow-hidden"
-            onClick={() => router.push(link)}
+            onClick={handleCardClick}
             onMouseEnter={() => setIsHovered(true)}
             onMouseLeave={() => setIsHovered(false)}
             whileHover={{ scale: 1.02, transition: { duration: 0.5 } }}
@@ -52,6 +64,13 @@ const ProjectCard: FC<ProjectCard> = ({ title, tags, image, video, link }) => {
                     {tags.map((tag, index) => (
                         <Tag key={index} text={tag} type="primarySmall" />
                     ))}
+                    {externalLink && (
+                        <Tag 
+                            text="Visit Project" 
+                            type="visitProject" 
+                            onClick={handleExternalLinkClick}
+                        />
+                    )}
                 </div>
             </motion.div>
         </motion.div>

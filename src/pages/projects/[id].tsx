@@ -19,6 +19,7 @@ interface ProjectDetailProps {
         description: string;
         tags: string[];
         images: string[];
+        externalLink: string;
     };
 }
 
@@ -48,6 +49,14 @@ const ProjectDetail: FC<ProjectDetailProps> = ({ project }) => {
                             {project.tags.map((tag, index) => (
                                 <Tag key={index} text={tag} type="primary" />
                             ))}
+                            {/* Project link tag */}
+                            {project.externalLink && (
+                                <Tag 
+                                    text="Visit Project" 
+                                    type="link" 
+                                    onClick={() => window.open(project.externalLink, '_blank', 'noopener,noreferrer')}
+                                />
+                            )}
                         </motion.div>
                     </motion.div>
 

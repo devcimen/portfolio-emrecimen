@@ -49,7 +49,7 @@ const ContactFooter: FC = () => {
                     className="text-gray-600 text-xs mt-4 lg:mt-8 text-blur-xs flex justify-center items-center lg:text-sm"
                     {...animationConfigText}
                 >
-                    © 2024 EMRE CIMEN all rights reserved
+                    © {new Date().getFullYear()} EMRE CIMEN
                 </motion.div>
             </motion.footer>
         </>
